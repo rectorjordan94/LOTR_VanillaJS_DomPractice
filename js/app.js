@@ -168,7 +168,13 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+	// grab strider from the buddies list
+	const buddies = document.querySelectorAll('.buddy')
+	// console.log(buddies)
+	const strider = buddies[3]
+	// console.log(strider)
+	// change innerText to Aragorn
+	strider.innerText = 'Aragorn'
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
