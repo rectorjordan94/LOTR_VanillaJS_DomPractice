@@ -198,11 +198,11 @@ function forgeTheFellowShip() {
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	hobbits.forEach((hobbit) => {
 		div.appendChild(hobbit)
-		alert(`${hobbit.innerText} has joined the party`)
+		// alert(`${hobbit.innerText} has joined the party`)
 	})
 	buddies.forEach((buddy) => {
 		div.appendChild(buddy)
-		alert(`${buddy.innerText} has joined the party`)
+		// alert(`${buddy.innerText} has joined the party`)
 	})
 	// after each character is added make an alert that they // have joined your party
 	rivendell.appendChild(div)
