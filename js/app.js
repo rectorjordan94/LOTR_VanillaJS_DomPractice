@@ -52,6 +52,7 @@ function makeMiddleEarth() {
 function makeHobbits() {
 	console.log('2: makeHobbits')
 	const ul = document.createElement('ul')
+	ul.classList.add('hobbits-ul')
 	// display an `unordered list` of hobbits in the shire
 	for (let i = 0; i < hobbits.length; i++) {
 		// give each hobbit a class of `hobbit`
@@ -95,6 +96,7 @@ function keepItSecretKeepItSafe() {
 function makeBaddies() {
 	console.log('4: makeBaddies')
 	const ul = document.createElement('ul')
+	ul.classList.add('baddies-ul')
 	// display an unordered list of baddies in Mordor
 	for (let i = 0; i < baddies.length; i++) {
 		// give each of the baddies a class of "baddy"
@@ -118,8 +120,10 @@ function makeBaddies() {
 function makeBuddies() {
 	console.log('5: makeBuddies')
 	const aside = document.createElement('aside')
+	aside.classList.add('rivendell-aside')
 	// create an `aside` tag
 	const ul = document.createElement('ul')
+	ul.classList.add('buddies-ul')
 	// put an `unordered list` of the `'buddies'` in the aside
 	for (let i = 0; i < buddies.length; i++) {
 		const li = document.createElement('li')
@@ -142,7 +146,16 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
+	// grab the shire container and the hobbits ul
+	const theShire = document.querySelector('#The-Shire')
+	const hobbitsUl = document.querySelector('.hobbits-ul')
+	// console.log(hobbitsUl)
+	// remove the hobbits ul from the shire container
+	theShire.removeChild(hobbitsUl)
+	// grab the rivendell aside
+	const rivendellAside = document.querySelector('.rivendell-aside')
+	// append the hobbits ul to the rivendell aside
+	rivendellAside.appendChild(hobbitsUl)
 	// assemble the `hobbits` and move them to `rivendell`
 }
 
